@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+
+<div>
+<br>
+<br>
+<div class="container" >
+    
+    <div class="row gy-5 gx-5">
+        
+
+<div *ngFor="let i of arr;let k=index" class="card" class="col-3">
+  
+     
+    
+    <div class="card-body text-warning"  style="background-color:rebeccapurple;">
+      <img [src]="i.sprites.front_default" width="100px"   alt="Pokemon" >
+      <h5 class="card-title">{{i.name}}</h5>
+      
+      <ul class="list-group list-group-flush ">
+        <li class="list-group-item list-color"><label>Height</label>: {{i.height}}</li>
+        <li class="list-group-item list-color"><label>Weight</label>: {{i.weight}}</li>
+        <li class="list-group-item list-color"><label>Move</label>: {{i.moves[0].move.name}}</li>
+        <li class="list-group-item list-color"><label>Power</label>: {{i.stats[0].base_stat}}</li>
+ 
+      </ul>
+    
+      <button class="btn btn-warning" (click)="fav(k)" >Add to favourites</button>
+      <!-- <button class="btn btn-warning" (click)="show()" >Show</button> -->
+    </div>
+ 
+
+
+</div>
+</div>
+</div>
+</div>

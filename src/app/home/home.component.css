@@ -1,0 +1,18 @@
+h1{
+    text-align: center;
+}
+.card-body{
+    text-align: center;
+    border-radius: 20px;
+    background-color: aquamarine;
+}
+.card-img-top{
+    width: 100px;
+    margin-left: 100px;
+ 
+}
+.list-color{
+    background-color:whitesmoke;
+    border-color:gold;
+    border-radius: 5px;
+}

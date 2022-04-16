@@ -1,0 +1,69 @@
+
+<div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand">Pokemon</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          
+          
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" routerLink="favourite">My favourites</a></li>
+              <li><a class="dropdown-item" href="#">Change theme</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li> -->
+          <a class="dropdown-item" routerLink="favourite">My favourites</a>
+          
+        </ul>
+
+        <form class="d-flex">
+          <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+          
+          <input class="form-control me-2" type="search" name="search" [(ngModel)]="search" 
+          placeholder="Search a Pokemon">
+          <button class="btn btn-outline-success"  type="submit" (click)="func()" >Search</button>
+        </form>
+        <!-- (ngModelChange)="func()" -->
+      </div>
+    </div>
+  </nav>
+ <!-- <div *ngFor="let i of arr">
+    <div *ngIf ="search===i.name">
+            {{i.height}}
+    </div>
+ </div> -->
+ <!-- <div>
+  <img [src]="ans" width=" 200px"  style="align-items: centre;">
+</div> -->
+
+<div *ngIf="flag" class="cen">
+  <div class="card" class="col-3">
+<div class="card-body text-warning"  style="background-color:rebeccapurple;">
+  <img [src]="ans.sprites.front_default" alt="{{notFound}}"width=" 100px" >
+  <h5 class="card-title">{{ans.name}}</h5>
+  <div *ngIf="found">
+  <ul class="list-group list-group-flush ">
+    <li class="list-group-item list-color"><label>Height</label>: {{ans.height}}</li>
+    <li class="list-group-item list-color"><label>Weight</label>: {{ans.weight}}</li>
+    <li class="list-group-item list-color"><label>Move</label>: {{ans.moves[0].move.name}}</li>
+    <li class="list-group-item list-color"><label>Power</label>: {{ans.stats[0].base_stat}}</li>
+
+  </ul>
+
+  <a href="#" class="btn btn-warning">Go somewhere</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+  <router-outlet></router-outlet>

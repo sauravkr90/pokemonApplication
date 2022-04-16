@@ -1,0 +1,31 @@
+
+<!-- <button (click)="show()">Show</button> -->
+<div class="container" >
+    
+    <div class="row gy-5 gx-5">
+<div *ngFor="let i of newFavArr" class="card" class="col-3">
+  
+     
+    
+    <div class="card-body text-warning"  style="background-color:rebeccapurple;">
+      <img [src]="newArr[i].sprites.front_default" width="100px"   alt="Pokemon" >
+      <h5 class="card-title">{{newArr[i].name}}</h5>
+      
+      <ul class="list-group list-group-flush ">
+        <li class="list-group-item list-color"><label>Height</label>: {{newArr[i].height}}</li>
+        <li class="list-group-item list-color"><label>Weight</label>: {{newArr[i].weight}}</li>
+        <li class="list-group-item list-color"><label>Move</label>: {{newArr[i].moves[0].move.name}}</li>
+        <li class="list-group-item list-color"><label>Power</label>: {{newArr[i].stats[0].base_stat}}</li>
+ 
+      </ul>
+    
+    </div>
+    
+    
+
+ 
+
+
+</div>
+    </div>
+</div>
